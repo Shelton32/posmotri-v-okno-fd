@@ -155,6 +155,7 @@ ol {
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 
 /*Стили для текста городов*/
@@ -292,10 +293,6 @@ input:focus-visible {
 
 .button:focus-visible {
   outline: 1px solid;
-}
-
-.content__card-link {
-  display: block;
 }
 
 .content__card-link_current {
