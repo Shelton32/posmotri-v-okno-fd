@@ -53,11 +53,15 @@ ol {
   background-color: #D9D9D9;
 }
 
+/*Если я начинаю здесь использовать внутренние (padding) или внешние (margin)*/
+/*у меня опускается весь блок content вниз, а как опустить только content__details*/
+/*я не разобрался, но нашел проблему, блок content__list-container был слишком растянут
+поэтому я жто исправил и практически попал в макет*/
 .content {
   display: flex;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
+  /*height: 534px;*/
   padding: 16px 8px;
 }
 
@@ -77,6 +81,7 @@ ol {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -87,10 +92,10 @@ ol {
 
 .content__list-container {
   overflow-y: auto;
-  height: 534px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  height: 298px;
 }
 
 .content__details {
@@ -98,7 +103,7 @@ ol {
   flex-grow: 1;
   height: 100%;
   flex-direction: column;
-  gap: 30px;
+  gap: 26px;
   width: 399px;
   min-width: 0;/*Разрешит сжиматься меньше содержимого, для того чтобы сработало ellipsis/line-clamp*/
 }
@@ -120,7 +125,7 @@ ol {
   height: 103px;
   min-width: 194px;
   object-fit: cover;
-  object-position: top right;
+  object-position: center;
   flex-shrink: 0; /*чтобы не сжималась картинка при нехватке меств*/
 }
 
@@ -133,7 +138,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   letter-spacing: 0;
   margin-bottom: 5px;
 }
@@ -209,7 +214,7 @@ ol {
 }
 
 /*Декоратор чекбокса, при новедении текст подчеркивается*/
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text  {
   text-decoration: underline;
 }
 
@@ -224,6 +229,9 @@ input {
   appearance: none;
   color: #fff;
   background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .search-form__textfield::placeholder {
@@ -262,7 +270,7 @@ input:focus-visible {
 
 .button {
   border: 1px solid #fff;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
@@ -299,7 +307,7 @@ input:focus-visible {
   background-color: #545050;
 }
 
-.content__card-link_current:active {
+.content__card-link:active,  .content__card-link_current:active  {
   background-color: #545050;
 }
 
