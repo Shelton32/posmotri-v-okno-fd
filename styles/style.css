@@ -211,7 +211,7 @@ ol {
 }
 
 /*Декоратор чекбокса, при новедении текст подчеркивается*/
-.search-form__label:hover .search-form__label-text  {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -304,7 +304,7 @@ input:focus-visible {
   background-color: #545050;
 }
 
-.content__card-link:active,  .content__card-link_current:active  {
+.content__card-link:active,  .content__card-link_current:active {
   background-color: #545050;
 }
 
