@@ -65,10 +65,14 @@ ol {
   gap: 30px;
 }
 
+.result {
+
+}
+
 .result__video-container {
   height: 386px;
   width: 711px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .result__video {
@@ -82,6 +86,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding-bottom: 4px;
 }
 
 .content__list-container {
@@ -231,6 +236,10 @@ input {
   font-size: 18px;
 }
 
+.search-form__textfield {
+  width: 225px;
+}
+
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
 
@@ -254,15 +263,11 @@ input:focus-visible {
   padding: 1px;
 }
 
-.search-form__checkbox:checked + search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
   min-inline-size: 15px;
   min-block-size: 15px;
   background-color: #fff;
-}
-
-.search-form__checkbox:checked {
-  opacity: 1;
 }
 
 .button {
